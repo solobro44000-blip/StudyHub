@@ -9,3 +9,4 @@ youtube-dl==2021.6.6
 uvloop
 tgcrypto-pyrofork
 pytz
+pydantic<2.0.0
