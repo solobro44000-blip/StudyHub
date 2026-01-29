@@ -11,4 +11,5 @@ try:
     log_chat: int = int(os.environ.get("LOG_CHAT", "0"))
 except ValueError:
     log_chat: int = 0
+sub_chat: str = "StudyHu_bot_testingsire"
 # ... rest of your code (log_chat, sub_chat, etc.) ...
