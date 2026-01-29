@@ -11,7 +11,9 @@ try:
     log_chat: int = int(os.environ.get("LOG_CHAT", "0"))
 except ValueError:
     log_chat: int = 0
-sub_chat: str = "StudyHu_bot_testingsite"
+
+sub_chat: str = "SakuraEmpireTeam"
+
 # List of user IDs who are admins/sudoers
 sudoers: List[int] = [6059117268]
 
