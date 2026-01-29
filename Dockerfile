@@ -1,7 +1,7 @@
-# Use Python 3.9 as base image
-FROM python:3.9-slim-buster
+# Use a newer base image (Bullseye or Bookworm) to fix apt-get errors
+FROM python:3.9-slim-bullseye
 
-# Install FFmpeg and git (Critical for this bot)
+# Install FFmpeg and git
 RUN apt-get update && apt-get install -y \
     ffmpeg \
     git \
@@ -14,7 +14,7 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip3 install --no-cache-dir -r requirements.txt
 
-# Copy the rest of the code
+# Copy the rest of the application
 COPY . .
 
 # Run the bot
